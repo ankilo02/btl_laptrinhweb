@@ -39,7 +39,7 @@
                             foreach ($result as $cat) {
                                 $cat_id = $cat['cat_id'];
                                 $cat_title = $cat['cat_title'];
-                                echo "<li><a href='store?cat=$cat_id'>$cat_title</a></li>";
+                                echo "<li><a href='store.php?cat=$cat_id'>$cat_title</a></li>";
                             }
                             ?>
 
