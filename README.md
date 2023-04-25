@@ -1,1 +1,1 @@
-# Web-Assignment-Bookstore
+# Web-Assignment-CoffeeStore
