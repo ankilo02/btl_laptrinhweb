@@ -2,7 +2,6 @@
 require 'db.php';
 include 'header.php';
 ?>
-
 <div class="main main-raised">
 
     <div class="section">
@@ -129,7 +128,7 @@ include 'header.php';
         <!-- /container -->
     </div>
 </div>
-
+<div class="tt"></div>
 <?php
 include "footer.php";
 ?>

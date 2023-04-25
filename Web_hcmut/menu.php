@@ -1,66 +1,21 @@
 <?php
-require 'db.php';
-include 'header.php';
+session_start();
+if (isset($_SESSION['checkedout']) && $_SESSION['checkedout']) {
+    $_SESSION['checkedout'] = false;
+}
+include "header.php";
 ?>
 
 <div class="main main-raised">
-    <div class="container mainn-raised" style="width:100%;">
-
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-
-                <div class="item active">
-                    <img src="assets/images/banner3.jpg" alt="Los Angeles" style="width:100%;">
-
-                </div>
-
-                <div class="item">
-                    <img src="assets/images/banner2.jpg" style="width:100%;">
-
-                </div>
-
-                <div class="item">
-                    <img src="assets/images/banner4.jpg" alt="New York" style="width:100%;">
-
-                </div>
-                <div class="item">
-                    <img src="assets/images/banner1.jpg" alt="New York" style="width:100%;">
-
-                </div>
-
-
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control _26sdfg" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Trước</span>
-            </a>
-            <a class="right carousel-control _26sdfg" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Sau</span>
-            </a>
-        </div>
-    </div>
-
-
-
     <!-- SECTION -->
-    <div class="section mainn mainn-raised">
-
-
+    <div class="section mainn-raised">
         <!-- container -->
         <div class="container">
-
             <!-- row -->
             <div class="row">
                 <!-- shop -->
                 <div class="col-md-4 col-xs-6">
-                    <a href="./product.php?p=78">
+                    <a href="./product.php?p=26">
                         <div class="shop">
                             <div class="shop-img">
                                 <img height="240" src=<?php
@@ -71,7 +26,7 @@ include 'header.php';
                                                         ?> alt="lập trình">
                             </div>
                             <div class="shop-body">
-                                <h3>Lập trình</h3>
+                                <h3>Maragogype</h3>
                                 <a href="./store.php?cat=5" class="cta-btn">Mua ngay <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
@@ -81,7 +36,7 @@ include 'header.php';
 
                 <!-- shop -->
                 <div class="col-md-4 col-xs-6">
-                    <a href="./product.php?p=72">
+                    <a href="./product.php?p=31">
                         <div class="shop">
                             <div class="shop-img">
                                 <img height="240" src=<?php
@@ -92,7 +47,7 @@ include 'header.php';
                                                         ?> alt="khoa học">
                             </div>
                             <div class="shop-body">
-                                <h3>Khoa học</h3>
+                                <h3>Moka</h3>
                                 <a href="./store.php?cat=6" class="cta-btn">Mua ngay <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
@@ -102,7 +57,7 @@ include 'header.php';
 
                 <!-- shop -->
                 <div class="col-md-4 col-xs-6">
-                    <a href="./product.php?p=79">
+                    <a href="./product.php?p=36">
                         <div class="shop">
                             <div class="shop-img">
                                 <img height="240" src=<?php
@@ -113,7 +68,7 @@ include 'header.php';
                                                         ?> alt="kinh điển">
                             </div>
                             <div class="shop-body">
-                                <h3>Kinh điển</h3>
+                                <h3>Typica</h3>
                                 <a href="./store.php?cat=7" class="cta-btn">Mua ngay <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
@@ -145,7 +100,7 @@ include 'header.php';
                 <!-- /section title -->
 
                 <!-- Products tab & slick -->
-                <div class="col-md-12 mainn mainn-raised">
+                <div class="col-md-12 mainn-raised">
                     <div class="row">
                         <div class="products-tabs">
                             <!-- tab -->
@@ -221,24 +176,6 @@ include 'header.php';
     </div>
     <!-- /SECTION -->
 
-    <!-- HOT DEAL SECTION -->
-    <div id="hot-deal" class="section mainn mainn-raised">
-        <!-- container -->
-        <div class="container">
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="hot-deal">
-                        <a class="primary-btn cta-btn" href="./store.php?cat=1">Bắt đầu mua sắm</a>
-                    </div>
-                </div>
-            </div>
-            <!-- /row -->
-        </div>
-        <!-- /container -->
-    </div>
-    <!-- /HOT DEAL SECTION -->
-
     <div class="section">
         <div class="container">
             <!-- row -->
@@ -246,7 +183,7 @@ include 'header.php';
 
                 <div class="col-md-12 col-xs-12">
                     <div class="section-title">
-                        <h4 class="title">Nên đọc</h4>
+                        <h4 class="title">Được ưu chuộng</h4>
                         <div class="section-nav">
                             <div id="slick-nav-4" class="products-slick-nav"></div>
                         </div>
@@ -315,7 +252,7 @@ include 'header.php';
                 ?>
 
                 <!-- Products tab & slick -->
-                <div class="col-md-12 mainn mainn-raised">
+                <div class="col-md-12 mainn-raised">
                     <div class="row">
                         <div class="products-tabs">
                             <!-- tab -->
@@ -580,75 +517,6 @@ include 'header.php';
     <!-- SECTION -->
     <div class="section">
         <div class="section">
-
-
-            <!-- container -->
-            <div class="container">
-
-                <!-- row -->
-                <div class="row">
-                    <!-- shop -->
-                    <div class="col-md-4 col-xs-6">
-                        <div class="wrapper">
-                            <div class="card">
-                                <img src="assets/images/body_footer_1.jpg">
-                                <div class="descriptions">
-                                    <h1>Đọc ở mọi lúc mọi nơi</h1>
-                                    <p>
-                                        BK Bookstore dùng được trên cả máy tính, di động, máy tính bảng. </p>
-                                    <button>
-                                        <i class="fab fa-youtube"></i>
-                                        Play trailer on YouTube
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /shop -->
-
-                    <!-- shop -->
-                    <div class="col-md-4 col-xs-6">
-                        <div class="wrapper">
-                            <div class="card">
-                                <img src="assets/images/body_footer_2.webp">
-                                <div class="descriptions">
-                                    <h1>Đa dạng thể loại nội dung</h1>
-                                    <p>
-                                        BK Bookstore có: Sách chữ, sách nói, truyện tranh và tạp chí. </p>
-                                    <button>
-                                        <i class="fab fa-youtube"></i>
-                                        Play trailer on YouTube
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /shop -->
-
-                    <!-- shop -->
-                    <div class="col-md-4 col-xs-6">
-                        <div class="wrapper">
-                            <div class="card">
-                                <img src="assets/images/body_footer_3.jpg">
-                                <div class="descriptions">
-                                    <h1>Đọc sách VIP siêu rẻ</h1>
-                                    <p>
-                                        Chỉ 1,000 vnđ/ngày là bạn có thể đọc Trọn bộ sách yêu thích trên BK
-                                        Bookstore
-                                    </p>
-                                    <button>
-                                        <i class="fab fa-youtube"></i>
-                                        Play trailer on YouTube
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /shop -->
-                </div>
-                <!-- /row -->
-            </div>
-            <!-- /container -->
         </div>
         <!-- /SECTION -->
         <div class="section">
@@ -667,7 +535,7 @@ include 'header.php';
             </div>
         </div>
     </div>
-
+</div>
 <?php
 include "footer.php";
 ?>

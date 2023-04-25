@@ -1,7 +1,6 @@
 <?php
 include "header.php";
 ?>
-
 <!-- SECTION -->
 <div class="section main main-raised">
 	<!-- container -->
@@ -42,7 +41,7 @@ include "header.php";
 					$result_review = mysqli_query($con, $sql_review);
 					$avg_star = mysqli_fetch_assoc($result_review)['AVG(star)'];
 
-					$sql = "UPDATE products SET product_rating=$avg_star WHERE product_id=$product_id";
+					$sql = "UPDATE products SET product_rating='$avg_star' WHERE product_id=$product_id";
 
 					$result_update = mysqli_query($con, $sql);
 

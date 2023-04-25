@@ -48,7 +48,7 @@ include "db.php";
 <body>
     <!-- HEADER -->
     <header>
-        <div id="header">
+        <div id="header" >
             <!-- container -->
             <div class="container">
                 <!-- row -->
@@ -147,7 +147,6 @@ include "db.php";
                                             <a href="./cart.php" style="width:100%;"><i class="fa fa-edit"></i>
                                                 Chỉnh sửa giỏ hàng
                                             </a>
-
                                         </div>
                                     </div>
 
