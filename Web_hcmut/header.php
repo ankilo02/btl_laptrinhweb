@@ -1,5 +1,7 @@
 <?php
-
+if(empty($_SESSION)){
+    session_start();
+}
 include 'ultils.php';
 include "db.php";
 ?>
