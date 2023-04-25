@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
   
-  const path = location.pathname.slice(38);
+  const path = location.pathname.slice(21);
   console.log(path)
   switch (path) {
     case "cart.php":
@@ -243,7 +243,7 @@ $(document).ready(function () {
       id,
       title,
       price,
-      image: `/product_images/${image}`,
+      image: `product_images/${image}`,
     };
     if (cart.find((item) => item.id === id)) {
       cart = cart.map((item) =>
